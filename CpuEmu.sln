@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "x86emu", "src\x86emu\x86emu.vcxproj", "{DBC00DD5-6C43-4B78-8290-92F972B41AA7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "armemu", "src\armemu\armemu.vcxproj", "{50B9FB9F-0283-4103-96F5-BFFB091A58A6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reasm", "src\reasm\reasm.vcxproj", "{B4949F08-AB0E-4B3E-85B4-D9051DE80329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBC00DD5-6C43-4B78-8290-92F972B41AA7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DBC00DD5-6C43-4B78-8290-92F972B41AA7}.Debug|Win32.Build.0 = Debug|Win32
+		{DBC00DD5-6C43-4B78-8290-92F972B41AA7}.Release|Win32.ActiveCfg = Release|Win32
+		{DBC00DD5-6C43-4B78-8290-92F972B41AA7}.Release|Win32.Build.0 = Release|Win32
+		{50B9FB9F-0283-4103-96F5-BFFB091A58A6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{50B9FB9F-0283-4103-96F5-BFFB091A58A6}.Debug|Win32.Build.0 = Debug|Win32
+		{50B9FB9F-0283-4103-96F5-BFFB091A58A6}.Release|Win32.ActiveCfg = Release|Win32
+		{50B9FB9F-0283-4103-96F5-BFFB091A58A6}.Release|Win32.Build.0 = Release|Win32
+		{B4949F08-AB0E-4B3E-85B4-D9051DE80329}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4949F08-AB0E-4B3E-85B4-D9051DE80329}.Debug|Win32.Build.0 = Debug|Win32
+		{B4949F08-AB0E-4B3E-85B4-D9051DE80329}.Release|Win32.ActiveCfg = Release|Win32
+		{B4949F08-AB0E-4B3E-85B4-D9051DE80329}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
