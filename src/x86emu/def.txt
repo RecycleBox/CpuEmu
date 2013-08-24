@@ -1,0 +1,48 @@
+A.2.1  Codes for Addressing Method
+The following abbreviations are usedto document addressing methods:
+A Direct address: the instruction has no ModR/M byte; the address of the operand is encoded in the instruction. No base register, index register, or scaling factor can be applied (for example, far JMP (EA)).
+B The VEX.vvvv field of the VEX prefix selects a general purpose register.
+C The reg field of the ModR/M byte selects a control register (for example, MOV (0F20, 0F22)).
+D The reg field of the ModR/M byte selects a debug register (for example, MOV (0F21,0F23)).
+E A ModR/M byte follows the opcode and specifies the operand. The operand is either a general-purpose register or a memory address. If it is a memory address, the address is computed from a segment register and any of the following values: a base register, an index register, a scaling factor, a displacement.
+F EFLAGS/RFLAGS Register.
+G The reg field of the ModR/M byte selects a general register (for example, AX (000)).
+H The VEX.vvvv field of the VEX prefix selects a 128-bit XMM register or a 256-bit YMM register, determined by operand type. For legacy SSE encodings this operand does not exist, changing the instruction to destructive form.
+I Immediate data: the operand value is encoded in subsequent bytes of the instruction.
+J The instruction contains a relative offset to be added to the instruction pointer register (for example, JMP (0E9), LOOP).
+L The upper 4 bits of the 8-bit immediate selects a 128-bit XMM register or a 256-bit YMM register, determined by operand type. (the MSB is ignored in 32-bit mode)
+M The ModR/M byte may refer only to memory (for example, BOUND, LES, LDS, LSS, LFS, LGS, CMPXCHG8B).
+N The R/M field of the ModR/M byte selects a packed-quadword, MMX technology register.
+O The instruction has no ModR/M byte. The offset ofthe operand is coded as a word or double word (depending on address size attribute) in the instruction. No base register, index register, or scaling factor can be applied (for example, MOV (A0¨CA3)).
+P The reg field of the ModR/M byte selects a packed quadword MMX technology register.
+Q A ModR/M byte follows the opcode and specifies the operand. The operand is either an MMX technology register or a memory address. If it is a memory address, the address is computed from a segment register and any of the following values: a base register, an index register, a scaling factor, and a displacement.
+R The R/M field of the ModR/M byte may refer only toa general register (for example, MOV (0F20-0F23)).
+S The reg field of the ModR/M byte selects a segment register (for example, MOV (8C,8E)).
+U The R/M field of the ModR/M byte selects a 128-bit XMM register or a 256-bit YMM register, determined by operand type.
+V The reg field of the ModR/M byte selects a 128-bit XMM register or a 256-bit YMM register, determined by operand type.
+W A ModR/M byte follows the opcode and specifies the operand. The operand is either a 128-bit XMM register, a 256-bit YMM register (determined by operand type), or a memory address. If it is a memory address, the address is computed from a segment register and any of the following values: a base register, an index register, a scaling factor, and a displacement.
+X Memory addressed by the DS:rSI register pair(for example, MOVS, CMPS, OUTS, or LODS).
+Y Memory addressed by the ES:rDI register pair (for example, MOVS, CMPS, INS, STOS, or SCAS).
+
+A.2.2  Codes for Operand Type
+The following abbreviations are used to document operand types:
+a  Two one-word operands in memory or two double-word operands in memory, depending on operand-size attribute (used only by the BOUND instruction).
+b  Byte, regardless of operand-size attribute.
+c  Byte or word, depending on operand-size attribute.
+d  Doubleword, regardless of operand-size attribute.
+dq Double-quadword, regardless of operand-size attribute.
+p  32-bit, 48-bit, or 80-bit pointer, depending on operand-size attribute.
+pd 128-bit or 256-bit packed double-precision floating-point data.
+pi Quadword MMX technology register (for example: mm0).
+ps 128-bit or 256-bit packed single-precision floating-point data.
+q  Quadword, regardless of operand-size attribute.
+qq Quad-Quadword (256-bits), regardless of operand-size attribute.
+s  6-byte or 10-byte pseudo-descriptor.
+sd Scalar element of a 128-bit double-precision floating data.
+ss Scalar element of a 128-bit single-precision floating data.
+si Doubleword integer register (for example: eax).
+v  Word, doubleword or quadword (in 64-bit mode), depending on operand-size attribute.
+w  Word, regardless of operand-size attribute.
+x  dq or qq based on the operand-size attribute.
+y  Doubleword or quadword (in 64-bit mode), depending on operand-size attribute.
+z  Word for 16-bit operand-size or doubleword for 32 or 64-bit operand-size.
