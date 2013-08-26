@@ -1,0 +1,3 @@
+NAME    x86emu.dll
+EXPORTS
+    CpuDecode

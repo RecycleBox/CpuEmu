@@ -2,6 +2,21 @@
 #include    "cpu.h"
 
 //Based on Intel® 64 and IA-32 Architectures Software Developer's Manual (June 2013)
+LPTSTR Register[11][16] = 
+{
+    { TEXT("al"), TEXT("cl"), TEXT("dl"), TEXT("bl"), TEXT("ah"), TEXT("ch"), TEXT("dh"), TEXT("bh"), },
+    { TEXT("al"), TEXT("cl"), TEXT("dl"), TEXT("bl"), TEXT("spl"), TEXT("bpl"), TEXT("sil"), TEXT("dil"),TEXT("r8l"), TEXT("r9l"), TEXT("r10l"), TEXT("r11l"), TEXT("r12l"), TEXT("r13l"), TEXT("r14l"), TEXT("r15l"), },
+    { TEXT("ax"), TEXT("cx"), TEXT("dx"), TEXT("bx"), TEXT("sp"), TEXT("bp"), TEXT("si"), TEXT("di"), TEXT("r8w"), TEXT("r9w"), TEXT("r10w"), TEXT("r11w"), TEXT("r12w"), TEXT("r13w"), TEXT("r14w"), TEXT("r15w"), },
+    { TEXT("eax"), TEXT("ecx"), TEXT("edx"), TEXT("ebx"), TEXT("esp"), TEXT("ebp"), TEXT("esi"), TEXT("edi"), TEXT("r8d"), TEXT("r9d"), TEXT("r10d"), TEXT("r11d"), TEXT("r12d"), TEXT("r13d"), TEXT("r14d"), TEXT("r15d"), },
+    { TEXT("rax"), TEXT("rcx"), TEXT("rdx"), TEXT("rbx"), TEXT("rsp"), TEXT("rbp"), TEXT("rsi"), TEXT("rdi"), TEXT("r8"), TEXT("r9"), TEXT("r10"), TEXT("r11"), TEXT("r12"), TEXT("r13"), TEXT("r14"), TEXT("r15"), },
+    { TEXT("st0"), TEXT("st1"), TEXT("st2"), TEXT("st3"), TEXT("st4"), TEXT("st5"), TEXT("st6"), TEXT("st7"), },
+    { TEXT("mm0"), TEXT("mm1"), TEXT("mm2"), TEXT("mm3"), TEXT("mm4"), TEXT("mm5"), TEXT("mm6"), TEXT("mm7"), },
+    { TEXT("xmm0"), TEXT("xmm1"), TEXT("xmm2"), TEXT("xmm3"), TEXT("xmm4"), TEXT("xmm5"), TEXT("xmm6"), TEXT("xmm7"), TEXT("xmm8"), TEXT("xmm9"), TEXT("xmm10"), TEXT("xmm11"), TEXT("xmm12"), TEXT("xmm13"), TEXT("xmm14"), TEXT("xmm15"), },
+    { TEXT("ymm0"), TEXT("ymm1"), TEXT("ymm2"), TEXT("ymm3"), TEXT("ymm4"), TEXT("ymm5"), TEXT("ymm6"), TEXT("ymm7"), TEXT("ymm8"), TEXT("ymm9"), TEXT("ymm10"), TEXT("ymm11"), TEXT("ymm12"), TEXT("ymm13"), TEXT("ymm14"), TEXT("ymm15"), },
+    { TEXT("cr0"), TEXT("cr1"), TEXT("cr2"), TEXT("cr3"), TEXT("cr4"), TEXT("cr5"), TEXT("cr6"), TEXT("cr7"), },
+    { TEXT("dr0"), TEXT("dr1"), TEXT("dr2"), TEXT("dr3"), TEXT("dr4"), TEXT("dr5"), TEXT("dr6"), TEXT("dr7"), },
+    
+};
 
 OPCODE_X86 Opcode__________ = { TEXT(""), 0, { 0x0 }, OPCODE_X86_INVAILD, OPCODE_X86_MODRM_NONE, OPCODE_X86_OPERAND_NONE, OPCODE_X86_IMMEDIATE_NONE, };
 OPCODE_X86 Opcode_00_____00 = { TEXT("add"), 1, { 0x00 }, OPCODE_X86_VAILD | OPCODE_X86_DIRECTION_BIT, OPCODE_X86_MODRM_REG | OPCODE_X86_MODRM_REG_MEM, OPCODE_X86_OPERAND_BYTE, OPCODE_X86_IMMEDIATE_NONE, };

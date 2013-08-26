@@ -15,7 +15,6 @@ BOOL WINAPI DllMain(
     if (fdwReason == DLL_PROCESS_ATTACH)
     {
         DisableThreadLibraryCalls(hinstDLL);
-        CpuDecode((LPBYTE)"\x8B\xEC\x90\x90\x90\x90\x90", CPU_X86_32BITS);
     }
 
     return TRUE;
